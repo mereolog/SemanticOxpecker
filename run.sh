@@ -1,0 +1,1 @@
+java -Xmx1024M -splash:data/cow.jpg -jar dist/OntoBeefGUI.jar

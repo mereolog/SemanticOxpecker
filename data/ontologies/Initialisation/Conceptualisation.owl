@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Conceptualisation2 "http://www.l3g.pl/ontologies/Conceptualisation.owl#" >
+    <!ENTITY Conceptualisation "http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2011/9/19/OntoBeefConceptualisation.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2011/9/19/OntoBeefConceptualisation.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Conceptualisation2="http://www.l3g.pl/ontologies/Conceptualisation.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Conceptualisation="http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#">
+    <owl:Ontology rdf:about="http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#categoryHasDomain -->
+
+    <owl:ObjectProperty rdf:about="&Conceptualisation;categoryHasDomain">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Conceptualisation;Relation"/>
+        <rdfs:range rdf:resource="&Conceptualisation;Unary_Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#categoryHasRange -->
+
+    <owl:ObjectProperty rdf:about="&Conceptualisation;categoryHasRange">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Conceptualisation;Relation"/>
+        <rdfs:range rdf:resource="&Conceptualisation;Unary_Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#categoryInstantiates -->
+
+    <owl:ObjectProperty rdf:about="&Conceptualisation;categoryInstantiates">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:range rdf:resource="&Conceptualisation;Category"/>
+        <rdfs:domain rdf:resource="&Conceptualisation;Individual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#categorySubsumes -->
+
+    <owl:ObjectProperty rdf:about="&Conceptualisation;categorySubsumes">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&Conceptualisation;Category"/>
+        <rdfs:domain rdf:resource="&Conceptualisation;Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#contains -->
+
+    <owl:ObjectProperty rdf:about="&Conceptualisation;contains">
+        <rdfs:range rdf:resource="&Conceptualisation;Category"/>
+        <rdfs:domain rdf:resource="&Conceptualisation;Ontology"/>
+        <owl:inverseOf rdf:resource="&Conceptualisation;isContainedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="&Conceptualisation;isContainedIn">
+        <rdfs:domain rdf:resource="&Conceptualisation;Category"/>
+        <rdfs:range rdf:resource="&Conceptualisation;Ontology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#isEquivalentTo -->
+
+    <owl:ObjectProperty rdf:about="&Conceptualisation;isEquivalentTo">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&Conceptualisation;categorySubsumes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#isRelatedToByRestriction -->
+
+    <owl:ObjectProperty rdf:about="&Conceptualisation;isRelatedToByRestriction">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="&Conceptualisation;Unary_Category"/>
+        <rdfs:range rdf:resource="&Conceptualisation;Unary_Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#characterisesPaper -->
+
+    <owl:DatatypeProperty rdf:about="&Conceptualisation;characterisesPaper">
+        <rdfs:domain rdf:resource="&Conceptualisation;Category"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/19/OntoBeefConceptualisation.owl#hasArity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/19/OntoBeefConceptualisation.owl#hasArity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Conceptualisation;Relation"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2011/9/19/OntoBeefConceptualisation.owl#hasURI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2011/9/19/OntoBeefConceptualisation.owl#hasURI">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Conceptualisation;Ontology"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#Category -->
+
+    <owl:Class rdf:about="&Conceptualisation;Category">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Conceptualisation;isContainedIn"/>
+                <owl:someValuesFrom rdf:resource="&Conceptualisation;Ontology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&Conceptualisation;Ontology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#Individual -->
+
+    <owl:Class rdf:about="&Conceptualisation;Individual">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Conceptualisation;categoryInstantiates"/>
+                <owl:someValuesFrom rdf:resource="&Conceptualisation;Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#Ontology -->
+
+    <owl:Class rdf:about="&Conceptualisation;Ontology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Conceptualisation;contains"/>
+                <owl:someValuesFrom rdf:resource="&Conceptualisation;Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2011/9/19/OntoBeefConceptualisation.owl#hasURI"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#Relation -->
+
+    <owl:Class rdf:about="&Conceptualisation;Relation">
+        <rdfs:subClassOf rdf:resource="&Conceptualisation;Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2011/9/19/OntoBeefConceptualisation.owl#hasArity"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&Conceptualisation;Unary_Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.l3g.pl/ontologies/OntoBeef/Conceptualisation.owl#Unary_Category -->
+
+    <owl:Class rdf:about="&Conceptualisation;Unary_Category">
+        <rdfs:subClassOf rdf:resource="&Conceptualisation;Category"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Conceptualisation;Category"/>
+            <rdf:Description rdf:about="&Conceptualisation;Individual"/>
+            <rdf:Description rdf:about="&Conceptualisation;Ontology"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
